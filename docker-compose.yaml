@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=payment-service'
+      - 'POSTGRES_USER=admin'
+      - 'POSTGRES_PASSWORD=admin'
+    ports:
+      - '5433:5432'
+
+  redis:
+    image: 'redis:latest'
+    ports:
+      - '6379:6379'
